@@ -4,6 +4,6 @@ includes:
 parameters:
   paths:
     # From PHPStan 0.12, paths to check are relative to the neon file
-    - ../../%currentWorkingDirectory%/%currentWorkingDirectory%.php
+    - ../../enicarriers.php
     - ../../views/
   level: 5
