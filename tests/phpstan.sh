@@ -1,6 +1,6 @@
 #!/bin/bash
 PS_VERSION=$1
-MODULE_NAME=eniblog
+MODULE_NAME=enicarriers
 
 set -e
 
