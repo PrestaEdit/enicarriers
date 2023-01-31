@@ -71,17 +71,17 @@ class EniCarriers extends CarrierModule
         // Comportement hors tranches :
         // - 0: Prendre la tranche la plus grande
         // - 1: Désactiver le transporteur
-        $carrier->range_behavior = 0;
+        $carrier->range_behavior = false;
 
         // Propriétés exclusives aux transporteurs ajoutés par un module
         // - is_module : définit le transporteur comme ajouté par un module
         // - shipping_external : permet de ne pas recourir à des méthodes spécifiques au module pour le calcul du prix de livraison
         // - external_module_name : défini le nom du module ajoutant le transporteur
         // - need_range : permet de définir si les plages sont utilisées
-        $carrier->is_module = 1;
+        $carrier->is_module = true;
         $carrier->shipping_external = true;
         $carrier->external_module_name = $this->name;
-        $carrier->need_range = 1;
+        $carrier->need_range = true;
 
         $carrier->add();
 
@@ -114,11 +114,11 @@ class EniCarriers extends CarrierModule
             $carrier->delay[(int) $language['id_lang']] = 'Delai du transporteur';
         }
         $carrier->shipping_method = Carrier::SHIPPING_METHOD_PRICE;
-        $carrier->range_behavior = 0;
-        $carrier->is_module = 1;
+        $carrier->range_behavior = false;
+        $carrier->is_module = true;
         $carrier->shipping_external = true;
         $carrier->external_module_name = $this->name;
-        $carrier->need_range = 0;
+        $carrier->need_range = false;
 
         $carrier->add();
 
