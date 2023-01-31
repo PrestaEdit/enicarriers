@@ -127,7 +127,7 @@ class EniCarriers extends CarrierModule
         $rangeObject->delimiter1 = '0';
         $rangeObject->delimiter2 = '10000';
         $rangeObject->add();
-        
+
         $zones = Zone::getZones(true);
         foreach ($zones as $zone) {
             $carrier->addZone((int) $zone['id_zone']);
